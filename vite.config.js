@@ -38,7 +38,5 @@ export default defineConfig({
   pwa: {
     name: 'Attendance Management System',
   },
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/Attendance-Management/'
-    : '/'  
+  base: '/Attendance-Management/'
 })
