@@ -1,0 +1,15 @@
+@import './base.css';
+
+#app {
+  max-width: 576px;
+  margin: 0 auto;
+  padding: 0;
+  font-weight: normal;
+  height: 100%;
+}
+
+footer .menu a.router-link-active,
+footer .menu a.router-link-exact-active {
+  color: #8085ee;
+  cursor: pointer;
+}
