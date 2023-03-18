@@ -37,6 +37,11 @@ export default defineConfig({
   },
   pwa: {
     name: 'Attendance Management System',
+    
+    workboxPluginMode: 'InjectManifest',
+    workboxOptions: {
+      swSrc: 'dev/sw.js',
+    }
   },
   base: '/Attendance-Management/'
 })
