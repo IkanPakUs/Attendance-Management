@@ -43,5 +43,5 @@ export default defineConfig({
       swSrc: 'dev/sw.js',
     }
   },
-  base: '/Attendance-Management/'
+  base: '/Attendance-Management'
 })

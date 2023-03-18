@@ -61,7 +61,7 @@ const switchFilter = (_filter) => {
 <template>
   <main>
     <div class="header">
-      <div class="header-text">Account</div>
+      <div class="header-text">Account Page</div>
     </div>
 
     <div class="content">
