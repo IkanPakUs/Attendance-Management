@@ -4,6 +4,7 @@ import cardControl from '../components/controls/card.vue'
 import { reactive, toRef } from 'vue'
 
 const props = defineProps(['categories'])
+const emit = defineEmits(['modalOpened']);
 
 const card_options = reactive({
   width: '90%',
@@ -25,6 +26,10 @@ const content_options = reactive({
 })
 
 const categories = toRef(props, 'categories')
+
+const openModal = (id) => {
+  emit('modalOpened', id);
+}
 </script>
 
 <template>
@@ -36,6 +41,9 @@ const categories = toRef(props, 'categories')
       :content_style="content_options"
       v-for="request in categories.requests"
       :key="request.index"
+      data-bs-toggle="modal"
+      data-bs-target="#request-modal"
+      @click="openModal(request.id)"
     >
       <template #media>
         <div class="avatar">
