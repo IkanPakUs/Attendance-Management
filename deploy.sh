@@ -7,8 +7,6 @@ echo "Build"
 # build
 npm run build
 
-workbox generateSW workbox-config.js
-
 # navigate into the build output directory
 cd dist
 
