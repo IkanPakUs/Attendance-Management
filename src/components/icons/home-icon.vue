@@ -3,7 +3,7 @@ import { useRoute } from 'vue-router'
 
 const props = defineProps(['width', 'height', 'color'])
 
-const route = useRoute();
+const route = useRoute()
 </script>
 
 <template>

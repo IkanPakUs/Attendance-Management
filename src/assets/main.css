@@ -13,3 +13,41 @@ footer .menu a.router-link-exact-active {
   color: #8085ee;
   cursor: pointer;
 }
+
+.modal#activity-modal .modal-header .left-content {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.modal#activity-modal .modal-header .left-content .modal-title {
+  margin-left: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.modal#activity-modal .modal-header .right-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal#activity-modal .modal-body .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal#activity-modal .modal-body .header .title {
+  font-size: 16px;
+  font-weight: 500;
+  width: 70%;
+}
+
+.modal#activity-modal .modal-body .header .date {
+  font-weight: 500;
+  color: var(--color-light-grey);
+  height: 30%;
+}

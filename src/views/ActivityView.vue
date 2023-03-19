@@ -106,26 +106,13 @@ onBeforeRouteLeave(() => {
 </script>
 
 <template>
-  <div class="content">
-    <div class="content-wrapper">
+  <main>
+    <div id="header">
+      <div class="header-text">Activity</div>
+    </div>
+
+    <div class="content">
       <div class="activity">
-        <h4>Recent Activity</h4>
-        <router-link to="/activity">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="18"
-            fill="currentColor"
-            class="bi bi-three-dots"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
-            />
-          </svg>
-        </router-link>
-      </div>
-      <div class="menu">
         <card-control
           :style="card_options"
           :content_style="content_options"
@@ -150,7 +137,7 @@ onBeforeRouteLeave(() => {
         </card-control>
       </div>
     </div>
-  </div>
+  </main>
 
   <modal-control :id="'activity-modal'" @modalClosed="modalClosed">
     <template #header>
@@ -191,50 +178,54 @@ onBeforeRouteLeave(() => {
 </template>
 
 <style scoped>
-.content {
-  width: 100%;
-  min-height: calc(100% - 335px);
+main {
+  height: 100%;
   background-color: var(--color-background-mute);
-  position: relative;
-  border-radius: 30px 30px 0 0;
-  padding-bottom: 70px;
-  position: relative;
-  font-family: 'DM Sans';
 }
 
-.content-wrapper {
-  padding-top: 30px;
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 1.5rem;
+  border-radius: 0 0 20px 20px;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  background-color: var(--color-background-mute);
+}
+
+#header .header-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .activity {
-  padding: 0 50px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.activity a {
-  color: var(--color-text);
-}
-
-.content-wrapper .menu {
-  padding-top: 20px;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: start;
+  padding: 10px 0;
+  flex-direction: column;
 }
 
-.content-wrapper .activity-content {
+.activity .activity-content {
   display: flex;
   justify-content: center;
   color: var(--color-text);
   flex-direction: column;
-  font-weight: bold;
+  font-weight: 600;
   padding-right: 10px;
+  font-size: 14px;
 }
 
-.content-wrapper .activity-content .date {
+.activity .activity-content .date {
   color: var(--color-dark-grey);
 }
 </style>
