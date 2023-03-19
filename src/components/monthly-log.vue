@@ -1,6 +1,13 @@
 <script setup>
 import cardControl from '../components/controls/card.vue'
+
+import dayjs from 'dayjs';
+import duration from 'dayjs/plugin/duration'
 import { reactive } from 'vue'
+
+dayjs.extend(duration);
+
+const props = defineProps(['month_period']);
 
 const card_options = reactive({
   width: '90%',

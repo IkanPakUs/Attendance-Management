@@ -2,6 +2,8 @@
 import cardControl from '../components/controls/card.vue'
 import { reactive } from 'vue'
 
+const props = defineProps(['week_period']);
+
 const card_options = reactive({
   width: '90%',
   height: 'fit-content',
