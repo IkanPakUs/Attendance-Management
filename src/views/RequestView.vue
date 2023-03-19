@@ -400,7 +400,7 @@ watch(
         </div>
         <div class="form-group">
           <label class="form-label">{{ form_request.request_type == 3 ? 'Description' : 'Reason' }}</label>
-          <textarea id="reason" rows="10" class="form-control" v-model="form_request.reason"></textarea>
+          <textarea id="reason" rows="4" class="form-control" v-model="form_request.reason"></textarea>
         </div>
         
         <div class="request-btn">
